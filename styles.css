@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app_header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#mortgage-calculator,
+#tax-calculator {
+    margin-bottom: 30px;
+}
+
+input[type="number"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px); /* Adjust width for padding and border */
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.highlight {
+    background-color: #ffff99; /* Choose a color that suits your design */
+    font-weight: bold;
+}
+
+#app {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures the boxes stack on smaller screens */
+}
+
+.row {
+    display: flex; /* Establishes this element as a flex container */
+    flex-direction: row; /* Aligns children in a row */
+    justify-content: space-around; /* Spaces out the children evenly */
+    flex-wrap: wrap; /* Allows children to wrap to the next line if needed */
+    margin-bottom: 20px; /* Adds space between the rows */
+}
+
+.row > div {
+    flex: 1; /* Allows children to grow and take available space */
+    padding: 20px; /* Adds padding inside each child div */
+    margin: 10px; /* Adds margin around each child div */
+    border: 2px solid #000; /* Adds a border around each child div */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    border-radius: 5px; /* Rounds the corners of the border */
+    background-color: #fff; /* Sets a background color */
+    max-width: calc(50% - 20px); /* Sets a maximum width for each child div */
+}
+
+.row > div:only-child {
+    max-width: 100%; /* If there's only one child div, it takes the full width */
+}
+
+@media (max-width: 768px) {
+    .row > div {
+        max-width: 100%; /* On smaller screens, each child div takes the full width */
+    }
+}
+
+/* Style for tables */
+table.highlightable {
+    width: 100%;
+    border-collapse: collapse; /* Ensures that the border is collapsed into a single border */
+  }
+  
+  /* Style for table headers and cells */
+  table.highlightable th,
+  table.highlightable td {
+    border: 1px solid #ddd; /* Thin, light grey border */
+    padding: 8px; /* Padding inside each cell */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style for table headers */
+  table.highlightable th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+    font-weight: bold; /* Make header text bold */
+  }
+
+/* Style for the inline container */
+.inline-container {
+    display: flex; /* Establishes this element as a flex container */
+    justify-content: space-between; /* Spaces out the children evenly */
+    align-items: center; /* Vertically centers the children */
+    margin-bottom: 10px; /* Adds some space below the container */
+  }
+  
+  .inline-container input,
+  .inline-container button {
+    flex: 1; /* Allows the input and button to grow and take up equal space */
+    margin: 5px; /* Adds margin around the input and button */
+  }
+  
+  /* If you want the button to not grow as much as the input, you can set a max-width */
+  .inline-container button {
+    flex: none; /* Prevents the button from growing */
+    margin-left: 10px; /* Adds some space between the input and button */
+  }
+  

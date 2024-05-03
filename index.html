@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Strategy Advisor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app_header">
+    <h1>Financial Strategy Advisor</h1>
+    <div id="app">
+        <div class="row">
+            <div id="mortgage-calculator">
+                <h2>Mortgage Calculator</h2>
+                <input type="number" id="house-price" placeholder="House Price">
+                <div class="inline-container">
+                    <input type="number" id="interest-rate" placeholder="Interest Rate (e.g., 2.5 for 2.5%)">
+                    <button onclick="calculateMortgage()">Calculate Mortgage</button>
+                    </div>
+                <table id="mortgage-result" class="highlightable">
+                    <thead>
+                        <tr>
+                        <th>Down Payment Rate</th>
+                        <th>Down Payment</th>
+                        <th>Loan Amount</th>
+                        <th>Interest Rate</th>
+                        <th>Amortization Period</th>
+                        <th>Bimonthly Payment</th>
+                        <th>Monthly Payment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Mortgage calculation results will go here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="tax-calculator">
+                <h2>Tax Calculator</h2>
+                <div class="inline-container">
+                    <input type="number" id="annual-income" placeholder="Annual Income">
+                    <button onclick="calculateTax()">Calculate Tax</button>
+                </div>
+                <p id="tax-result"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="smith-maneuver">
+                <h1>Smith Maneuver</h1>
+                <div class="inline-container">
+                    <input type="number" id="savings" placeholder="Savings">
+                    <button onclick="calculateSmithManeuver()">Calculate</button>
+                </div>
+                <table id="smith-maneuver-result" class="highlightable">
+                <!-- ... -->
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div id="cashflow">
+                <h1>Cashflow</h1>
+                <table id="cashflow-result" class="highlightable">
+                    <thead>
+                        <tr>
+                            <th>Cashflow</th>
+                            <th>Smith amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cashflow calculation results will go here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
