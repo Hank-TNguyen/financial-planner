@@ -68,6 +68,24 @@ p {
     }
 }
 
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    .inline-container {
+        flex-direction: column;
+    }
+
+    .inline-container input,
+    .inline-container button {
+        margin: 5px 0; /* Stack with vertical margin */
+        width: 100%; /* Full width on mobile */
+    }
+
+    .inline-container button {
+        margin-top: 10px; /* Add space between the input and button */
+    }
+}
+
 /* Style for tables */
 table.highlightable {
     width: 100%;
